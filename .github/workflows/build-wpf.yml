@@ -1,0 +1,30 @@
+name: Build WPF Project (.csproj)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Restore packages
+        run: nuget restore Pipeline/Pipeline.csproj
+
+      - name: Build project
+        run: msbuild Pipeline/Pipeline.csproj /p:Configuration=Release
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wpf-build
+          path: Pipeline\bin\Release\
