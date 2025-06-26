@@ -1,4 +1,4 @@
-name: Build WPF Project (.csproj)
+name: Build & Test WPF App (.NET Framework)
 
 on:
   push:
@@ -11,19 +11,23 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Restore packages
-        run: nuget restore Pipeline/Pipeline.csproj
+      - name: Restore NuGet packages
+        run: nuget restore Pipeline.sln
 
-      - name: Build project
-        run: msbuild Pipeline/Pipeline.csproj /p:Configuration=Release
+      - name: Build solution
+        run: msbuild Pipeline.sln /p:Configuration=Release
 
-      - name: Upload build artifacts
+      - name: Run MSTest unit tests
+        run: |
+          vstest.console.exe Pipeline.Tests\bin\Release\TestProject.dll
+
+      - name: Upload WPF build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: wpf-build

@@ -1,0 +1,17 @@
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\TestProject.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\TestProject.pdb
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Pipeline.exe
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Pipeline.pdb
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Pipeline.exe.config
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\obj\Debug\TestProject.csproj.AssemblyReference.cache
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\obj\Debug\TestProject.csproj.CopyComplete
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\obj\Debug\TestProject.dll
+C:\Users\zakan\source\repos\PipelineTest\Pipeline.Tests\obj\Debug\TestProject.pdb
