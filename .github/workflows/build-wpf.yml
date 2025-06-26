@@ -26,10 +26,13 @@ jobs:
       - name: Run analyzers and treat warnings as errors
         run: msbuild Pipeline.sln /p:RunAnalyzers=true /p:TreatWarningsAsErrors=true
 
-      - name: Run MSTest unit tests
-        shell: pwsh
-        run: |
-            Get-Command vstest.console.exe | Select-Object -ExpandProperty Source
+      - name: Run MSTest tests
+        uses: microsoft/vstest-action@v1
+        with:
+          testSelector: 'testAssemblies'
+          testAssembly: '**\*Project.dll'        # This pattern picks all test dlls ending with Tests.dll
+          searchFolder: 'Pipeline.Tests\bin\Release'  # Point this to your test project's output folder
+
 
       - name: Upload WPF build artifacts
         uses: actions/upload-artifact@v4
