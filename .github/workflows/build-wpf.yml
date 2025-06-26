@@ -32,8 +32,9 @@ jobs:
           nuget install Microsoft.TestPlatform -Version 17.9.0 -OutputDirectory vstest
       
       - name: Run MSTest tests
+        shell: pwsh
         run: |
-          vstest\Microsoft.TestPlatform.17.9.0\tools\net451\Common7\IDE\Extensions\TestPlatform\vstest.console.exe Pipeline.Tests\bin\Release\*.dll
+          & "vstest/Microsoft.TestPlatform.17.9.0/tools/net451/Common7/IDE/Extensions/TestPlatform/vstest.console.exe" Pipeline.Tests/bin/Release/*.dll
 
       - name: Upload WPF build artifacts
         uses: actions/upload-artifact@v4
