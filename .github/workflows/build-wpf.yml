@@ -26,19 +26,14 @@ jobs:
       - name: Run analyzers and treat warnings as errors
         run: msbuild Pipeline.sln /p:RunAnalyzers=true /p:TreatWarningsAsErrors=true
 
-      - name: Install Visual Studio Test Platform
-        uses: microsoft/setup-vstest@v1
-        
-      - name: Run MSTest tests
-        shell: pwsh
+      - name: Download VSTest.Console CLI
         run: |
-          & ${{ steps.find-vstest.outputs.path }} Pipeline.Tests\bin\Release\*.Project.dll
-        id: run-tests
+          mkdir vstest
+          nuget install Microsoft.TestPlatform -Version 17.9.0 -OutputDirectory vstest
       
-      # Note: For the 'Find vstest.console.exe' step, you need to set an id:
-      # id: find-vstest
-      
-
+      - name: Run MSTest tests
+        run: |
+          vstest\Microsoft.TestPlatform.17.9.0\tools\net451\Common7\IDE\Extensions\TestPlatform\vstest.console.exe Pipeline.Tests\bin\Release\*.dll
 
       - name: Upload WPF build artifacts
         uses: actions/upload-artifact@v4
