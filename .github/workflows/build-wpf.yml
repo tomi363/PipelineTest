@@ -30,6 +30,11 @@ jobs:
         run: |
           mkdir vstest
           nuget install Microsoft.TestPlatform -Version 17.9.0 -OutputDirectory vstest
+
+      - name: List vstest folder contents
+        run: dir vstest /s /b
+        shell: cmd
+
       
       - name: Run MSTest tests
         shell: pwsh
