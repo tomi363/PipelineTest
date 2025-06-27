@@ -27,6 +27,7 @@ namespace Pipeline
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            int a;
             TestLabel.Visibility = Visibility.Visible;
             await Task.Delay(5000);
             TestLabel.Visibility = Visibility.Hidden;
